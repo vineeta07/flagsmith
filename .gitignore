@@ -1,0 +1,6 @@
+node_modules/
+# Local configuration with the environment key
+public/config.js
+flagsmith.json
+*.env
+.env*

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Shop</title>
+  <style>
+    :root { --bg: #f6f7f9; --card: #fff; --text: #1d2330; --muted: #5d6778; --accent: #6837fc; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #14161b; --card: #1f232b; --text: #e8eaf0; --muted: #9aa3b2; --accent: #8f6bff; }
+    }
+    body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    main { max-width: 420px; margin: 48px auto; padding: 0 16px; }
+    .card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 1px 4px rgb(0 0 0 / 0.08); }
+    h1 { font-size: 1.4rem; margin: 0 0 4px; }
+    .price { font-size: 1.2rem; font-weight: 600; margin: 12px 0 20px; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    button { width: 100%; padding: 12px; font-size: 1rem; font-weight: 600; border: 0; border-radius: 8px;
+             background: var(--accent); color: #fff; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: default; }
+    #status { min-height: 1.5em; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>Noise-cancelling headphones</h1>
+      <p class="muted">Wireless, 30-hour battery, free delivery.</p>
+      <p class="price">$49.00</p>
+      <button id="checkout" disabled>Loading…</button>
+      <p id="status" class="muted" role="status"></p>
+      <p class="muted">Signed in as <code id="user"></code></p>
+    </div>
+  </main>
+  <script src="/config.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

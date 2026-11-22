@@ -1,0 +1,17 @@
+{
+  "name": "flagsmith-checkout-experiment-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tiny demo shop for an A/B test of the checkout button copy with Flagsmith Experimentation.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "simulate": "node simulate.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@flagsmith/flagsmith": "^12.5.0"
+  }
+}
